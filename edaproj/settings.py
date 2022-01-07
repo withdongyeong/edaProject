@@ -31,7 +31,7 @@ DEBUG = True
 if os.getcwd() == '/app':
     DEBUG = False
 
-ALLOWED_HOSTS = ['birdborneda.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'homepage',
     'bootstrap4'
 ]
+django_heroku.settings(locals())
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

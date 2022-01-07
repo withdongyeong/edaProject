@@ -26,9 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-^#$e82e=0o*!2_np&$wqek5v$-gj(is+*qker3o(+y)1q0#qri')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+if os.getcwd() == '/app':
+    DEBUG = False
+
+ALLOWED_HOSTS = ['birdborneda.herokuapp.com', '127.0.0.1']
 
 
 # Application definition

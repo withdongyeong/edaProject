@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'homepage',
     'bootstrap4'
 ]
-django_heroku.settings(locals())
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

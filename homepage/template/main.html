@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Base html Test{% endblock %}
+{% block content %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Jumbotron example · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/jumbotron/">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+<main>
+  <div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>BirdBornEDA</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
+        <span class="fs-4">BirdBornEDA</span>
+      </a>
+    </header>
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Birds' Bones and Living Habits</h1>
+        <p class="col-md-8 fs-4">Programmers AI Dev Course</p>
+        <p class="col-md-8 fs-4">Monthly Project 1 EDA Report </p>
+        <a href="https://www.kaggle.com/zhangjuefei/birds-bones-and-living-habits/">
+          <span class="badge bg-success" type="button">Git</span><span class="badge bg-info" type="button">Dataset</span>
+        </a>
+        <p style="text-align: center;">
+            <img src="{% static "img/born.jpg" %}" width=282 height=408>
+        </p>
+      </div>
+    </div>
+
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-white bg-dark rounded-3">
+          <h2>Context</h2>
+          <p>수 많은 종류의 새들은 각기 다른 생활 양식을 가지고 있습니다. 어떤 종은 날 수 있고, 어떤 종은 날 순 없지만 빨리 달리거나 수영을 할 수 있죠.</p>
+          <p>생태학적인 특성에 따라 새들은 8가지 그룹으로 분류할 수 있습니다. 이 데이터 셋은 그 중 6가지 종류의 그룹에 대해서 생태학적 특성에 따른 뼈의 모습의 차이가 있는지 알아보기 위한 자료입니다.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>1. 데이터 분석하기</h2>
+          <p>데이터의 내용을 분석하고, 필요에 따라 전처리를 수행합니다.</p>
+          <a href="preprocess/">
+            <button class="btn btn-outline-secondary" type="button">데이터 분석하기</button>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>2. 가설 세우기</h2>
+          <p>데이터의 전반적인 내용을 토대로, 유의미한 가능성에 대한 가설을 세웁니다.</p>
+          <a href="hypotheses/">
+            <button class="btn btn-outline-secondary" type="button">가설 세우기</button>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>3. 가설 검증하기</h2>
+          <p>가설을 검증하기 위해 데이터를 그래프화합니다.</p>
+          <a href="validation/">
+            <button class="btn btn-outline-secondary" type="button">그래프화하기</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="pt-3 mt-4 text-muted border-top">
+      &copy; 2021 / 프로그래머스 인공지능 데브코스 3기 김동영
+    </footer>
+  </div>
+</main>
+
+
+    
+  </body>
+</html>
+{% endblock %}

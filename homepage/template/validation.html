@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Base html Test{% endblock %}
+{% block content %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="{% static "js/plotly-latest.min.js" %}"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Jumbotron example · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/jumbotron/">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+<main>
+  <div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>BirdBornEDA</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
+        <span class="fs-4">BirdBornEDA</span>
+      </a>
+    </header>
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">가설 검증하기</h1>
+
+
+        <div class="card border-dark mb-3" style="max-width: 80rem;">
+          <div class="card-header">상완골 길이와 지름</div>
+          <div class="card-body">
+            <p class="card-text"> 앞서 히트맵을 통해 상완골이 길이와 지름이 높은 상관을 보인다는 것을 알았습니다.</p>
+            <p class="card-text"> 아래의 그래프를 통해 눈으로 확인해봅시다.</p>
+            <p class="card-text"> 마우스 클릭으로 표시할 새의 종류를 변경할 수 있습니다.</p>
+            <p class="card-text"> 모든 종류의 새에서, 상완골 길이와 지름에 상관 관계가 있음을 알 수 있습니다.</p>
+          </div>
+        </div>
+
+        {% autoescape off %}
+          {{ plot_div_1 }}
+        {% endautoescape %}
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+
+        <div class="card border-dark mb-3" style="max-width: 80rem;">
+          <div class="card-header">생태학적 분류와 뼈의 모양 - 날개</div>
+          <div class="card-body">
+            <p class="card-text"> 그렇다면 생태학적 분류에 따라서 뼈의 모양에 차이가 있을까요?</p>
+            <p class="card-text"> 아래의 그래프를 통해 눈으로 비교해봅시다.</p>
+            <p class="card-text"> 마우스 클릭으로 표시할 새의 종류를 변경할 수 있습니다.</p>
+            <p class="card-text"> 척골은 사람으로 치면 팔, 즉 새의 날개쪽 뼈입니다.</p>
+            <p class="card-text"> 육식을 하는 새나 수영을 하는새, 습지에서 사는 새들이 척골 길이가 긴 모습입니다.</p>
+            <p class="card-text"> 나무를 오르내릴 수 있는 새나, 노래를 부르는 새, 육상 조류는 비교적 길이가 짧음을 알 수 있습니다.</p>
+          </div>
+        </div>
+
+        {% autoescape off %}
+          {{ plot_div_2 }}
+        {% endautoescape %}
+
+        <div class="card border-dark mb-3" style="max-width: 80rem;">
+          <div class="card-header">생태학적 분류와 뼈의 모양 - 다리</div>
+          <div class="card-body">
+            <p class="card-text"> 다리뼈의 경우에는 어떨까요?</p>
+            <p class="card-text"> 아래의 그래프를 통해 눈으로 비교해봅시다.</p>
+            <p class="card-text"> 마우스 클릭으로 표시할 새의 종류를 변경할 수 있습니다.</p>
+            <p class="card-text"> 대퇴골과 경골은 새의 다리뼈에 해당합니다.</p>
+            <p class="card-text"> 날개뼈를 볼때와 달리, 육상 조류의 다리도 긴축에 속하게 되었습니다.</p>
+            <p class="card-text"> 나무를 등반하거나 노래를 부르는 새의 다리가 짧은 편이네요.</p>
+          </div>
+        </div>
+
+        {% autoescape off %}
+          {{ plot_div_3 }}
+        {% endautoescape %}
+
+        {% autoescape off %}
+          {{ plot_div_4 }}
+        {% endautoescape %}
+
+        <div class="card border-dark mb-3" style="max-width: 80rem;">
+          <div class="card-header">생태학적 분류와 뼈의 모양 - 발</div>
+          <div class="card-body">
+            <p class="card-text"> 마지막으로 발을 한번 볼까요?</p>
+            <p class="card-text"> 아래의 그래프를 통해 눈으로 비교해봅시다.</p>
+            <p class="card-text"> 마우스 클릭으로 표시할 새의 종류를 변경할 수 있습니다.</p>
+            <p class="card-text"> 족저근은 새의 발에 해당합니다.</p>
+            <p class="card-text"> 가설에서 예상했던 것과는 달리 나무를 등반하거나 육상 조류라고 해서 가장 높은 분포를 보이지는 않습니다.</p>
+            <p class="card-text"> 날개, 다리, 발에 걸쳐서 전체적으로 맹금류, 육식을 하는 조류의 뼈가 큰 모습입니다.</p>
+
+          </div>
+        </div>
+
+        {% autoescape off %}
+          {{ plot_div_5 }}
+        {% endautoescape %}
+
+      </div>
+    </div>
+
+    <p style="text-align: center;">
+      <a href="../">
+      <button type="button" class="btn btn-secondary">Home</button>
+      </a>
+      <a href="../preprocess/">
+      <button type="button" class="btn btn-secondary">preporcess</button>
+      </a>
+      <a href="../hypotheses/">
+      <button type="button" class="btn btn-secondary">hypotheses</button>
+      </a>
+      <a href="../validation/">
+      <button type="button" class="btn btn-primary">Validation</button>
+      </a>
+      </p>
+
+    <footer class="pt-3 mt-4 text-muted border-top">
+      &copy; 2021
+    </footer>
+  </div>
+</main>
+
+
+    
+  </body>
+</html>
+{% endblock %}

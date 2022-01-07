@@ -18,4 +18,4 @@
 
 사용된 데이터 셋: [새의 생태학적 분류에 따른 뼈의 길이 및 지름](https://www.kaggle.com/zhangjuefei/birds-bones-and-living-habits/)
 
-url : (temp)
+url : https://birdborneda.herokuapp.com/

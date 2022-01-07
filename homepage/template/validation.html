@@ -58,6 +58,9 @@
           </div>
         </div>
 
+        {% autoescape off %}
+          {{ plot_div_1 }}
+        {% endautoescape %}
 
         <li class="nav-item">
           <a class="nav-link active" href="#">Active</a>
@@ -91,7 +94,13 @@
           </div>
         </div>
 
+        {% autoescape off %}
+          {{ plot_div_3 }}
+        {% endautoescape %}
 
+        {% autoescape off %}
+          {{ plot_div_4 }}
+        {% endautoescape %}
 
         <div class="card border-dark mb-3" style="max-width: 80rem;">
           <div class="card-header">생태학적 분류와 뼈의 모양 - 발</div>
@@ -105,6 +114,7 @@
 
           </div>
         </div>
+
 
 
       </div>
